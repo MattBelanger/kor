@@ -1,0 +1,7 @@
+Suggested Testing
+
+- Install vagrant, and initialize with "vagrant up"
+- Project will be available at 192.168.33.10. Should work with any domain if you edit your hosts file
+- Tests at 192.168.33.10/tests.php, in simple test
+- Other URLs as per requirements
+- Built using PHP (no framework) and jQuery, with SimpleTest for unit testing

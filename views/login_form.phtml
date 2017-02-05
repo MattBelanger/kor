@@ -1,0 +1,16 @@
+<?php include('header.phtml'); ?>
+<h1>Login</h1>
+<?php if ($message) { ?>
+<div class="message"><?php echo $message; ?></div>
+<?php } ?>
+<form method="POST" action="/login">
+    <input type="hidden" name="formtoken" value="<?php echo md5(rand()); ?>" />
+    <dl>
+        <dt><label for="username">Username</label></dt>
+        <dd><input id="username" type="text" name="username" value="<?php echo $username;?>" /></dd>
+        <dt><label for="password">Password</label></dt>
+        <dd><input id="password" type="password" name="password" value="<?php echo $password;?>" /></dd>
+        <dt></dt>
+        <dd><input type="submit" value="Login" /></dd>
+</form>
+<?php include('footer.phtml'); ?>
