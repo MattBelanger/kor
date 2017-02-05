@@ -12,6 +12,12 @@
 </table>
 
 <script type="text/javascript">
-
+ $(function() {
+     $.getJSON('<?php echo $targetUrl; ?>', function(result){
+         $.each(result, function(i, car){
+             $('#Cars').append('<tr><td>'+car.make+'</td><td>'+car.model+'</td><td class="number">$'+$.number(car.price)+'</td><td class="number">'+$.number(car.mileage)+'</td></tr>');
+         });
+     });
+ });
 </script>
 <?php include('footer.phtml'); ?>

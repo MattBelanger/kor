@@ -5,3 +5,4 @@ Suggested Testing
 - Tests at 192.168.33.10/tests.php, in simple test
 - Other URLs as per requirements
 - Built using PHP (no framework) and jQuery, with SimpleTest for unit testing
+- The unit tests will log you out

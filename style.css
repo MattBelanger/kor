@@ -1,0 +1,15 @@
+#Cars {
+    margin: 30px auto 0;
+}
+#Cars thead td {
+    font-weight: bold;
+}
+#Cars td {
+    min-width: 100px;
+    padding: 0 10px;
+}
+
+td.number {
+    text-align: right;
+}
+

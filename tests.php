@@ -76,8 +76,8 @@ class CarsTestCase extends UnitTestCase {
         $cars->useAll();
         
         $output = json_decode($cars->getJson(), true);
-        $this->assertIsA($output['cars'], 'array');
-        $this->assertEqual(count($output['cars']), 3);
+        $this->assertIsA($output, 'array');
+        $this->assertEqual(count($output), 3);
     }
 
     function testFilter() {
@@ -90,8 +90,8 @@ class CarsTestCase extends UnitTestCase {
         $cars->filterData(array('make' => 'honda'));
         $output = json_decode($cars->getJson(), true);
 
-        $this->assertIsA($output['cars'], 'array');
-        $this->assertEqual(count($output['cars']), 1);
+        $this->assertIsA($output, 'array');
+        $this->assertEqual(count($output), 1);
     }
 
     function testNone() {
@@ -99,8 +99,8 @@ class CarsTestCase extends UnitTestCase {
         $cars->useNone();
 
         $output = json_decode($cars->getJson(), true);
-        $this->assertIsA($output['cars'], 'array');
-        $this->assertEqual(count($output['cars']), 0);
+        $this->assertIsA($output, 'array');
+        $this->assertEqual(count($output), 0);
     }
         
 }

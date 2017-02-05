@@ -20,17 +20,17 @@ class Cars {
     }
 
     function useNone() {
-        $this->outputData = array('cars' => array());
+        $this->outputData = array();
     }
 
     function filterData($parameters) {
         $fields = array_keys($parameters);
         $field = $fields[0];
         $value = $parameters[$field];
-        $this->outputData['cars'] = array();
-        foreach ($this->data['cars'] as $car) {
+        $this->outputData = array();
+        foreach ($this->data as $car) {
             if (strtoupper($car[$field]) == strtoupper($value)) {
-                $this->outputData['cars'][] = $car;
+                $this->outputData[] = $car;
             }
         }
     }
@@ -40,7 +40,8 @@ class Cars {
     }  
 
     private function loadData() {
-        $this->data = json_decode(file_get_contents($this->dataSource), true);
+        $data = json_decode(file_get_contents($this->dataSource), true);
+        $this->data = $data['cars'];
         $this->outputData = $this->data;
     }
 
